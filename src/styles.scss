@@ -20,10 +20,13 @@
   transition: background .12s ease;
 }
 
-// .win-icon:hover {
-//   background: rgba(255,255,255,0.18);
-// }
+.window, .window * {
+  -webkit-user-select: none;
+  user-select: none;
+}
 
-// .win-icon:active {
-//   background: rgba(255,255,255,0.26);
-// }
+.top {
+  -webkit-user-select: none;
+  user-select: none;
+//   cursor: move;
+}

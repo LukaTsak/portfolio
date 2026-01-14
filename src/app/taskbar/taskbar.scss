@@ -11,13 +11,20 @@ main {
   display: flex;
   gap: 5px;
   align-items: center;
+  justify-content: space-between;
   z-index: 1000;
+
+  .left {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 15px;
+    padding: 5px 10px;
     // border: 1px solid red;
     height: 100%;
 
@@ -40,6 +47,7 @@ main {
   }
 
   .startContainer {
+    margin-left: 5px;
     .start {
       background-image: url('../../images/startLogo.svg');
     }
@@ -57,12 +65,34 @@ main {
     }
   }
 
-  .chromecontainer{
-    .chrome{
+  .chromecontainer {
+    .chrome {
       width: 27px;
       height: 23px;
       background-image: url('../../images/chrome.svg');
+    }
+  }
 
+  .right {
+    // margin-right: 5px;
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    .font {
+      font-size: 12px;
+      font-family: 'Segoe UI', 'Segoe UI Variable', system-ui, -apple-system, BlinkMacSystemFont,
+        sans-serif;
+    }
+    .date {
+      width: 60px;
+      text-align: center;
+    }
+    .blank {
+      width: 6px;
+      border-left: 1px solid gray;
+      &:hover {
+        background-color: rgba(229, 241, 251, 0.25);
+      }
     }
   }
 }

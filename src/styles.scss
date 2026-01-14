@@ -3,3 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Segoe MDL2 Assets';
+  src: local('Segoe MDL2 Assets');
+}
+.win-icon {
+  font-family: 'Segoe MDL2 Assets';
+  font-size: 13px;
+  width: 30px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 2px;
+  user-select: none;
+  transition: background .12s ease;
+}
+
+// .win-icon:hover {
+//   background: rgba(255,255,255,0.18);
+// }
+
+// .win-icon:active {
+//   background: rgba(255,255,255,0.26);
+// }

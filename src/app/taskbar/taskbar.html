@@ -1,14 +1,27 @@
 <main>
-  <div class="container startContainer">
-    <div class="icon start"></div>
+  <div class="left">
+    <div class="container startContainer">
+      <div class="icon start"></div>
+    </div>
+
+    <div class="container explorerContainer">
+      <div class="icon explorer"></div>
+    </div>
+
+    <div class="container chromecontainer">
+      <div class="icon chrome"></div>
+    </div>
   </div>
 
-  <div class="container explorerContainer">
-    <div class="icon explorer"></div>
+  <div class="right">
+    <div class="container win-icon">&#xE70E;</div>
+    <div class="container win-icon">&#xE703;</div>
+    <div class="container win-icon">&#xE995;</div>
+    <div class="container win-icon font">ENG</div>
+    <div class="container win-icon date">{{ currentDate | date:'HH:mm' }} {{ currentDate | date:'MM/dd/yy' }}</div>
+    <div class="blank"></div>
+
   </div>
 
-  <div class="container chromecontainer">
-    <div class="icon chrome"></div>
-  </div>
   <!-- <img class="start" src="../../images/startLogo.svg" alt=""> -->
 </main>

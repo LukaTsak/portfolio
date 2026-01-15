@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Desktop } from './desktop';
+import { Window } from './window';
 
-describe('Desktop', () => {
-  let component: Desktop;
-  let fixture: ComponentFixture<Desktop>;
+describe('Window', () => {
+  let component: Window;
+  let fixture: ComponentFixture<Window>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Desktop]
-    })
-    .compileComponents();
+      imports: [Window],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(Desktop);
+    fixture = TestBed.createComponent(Window);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

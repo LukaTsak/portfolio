@@ -1,22 +1,22 @@
-<main>
+<main id="desktop">
   <img
     src="https://cdn.mos.cms.futurecdn.net/52HVcjStCQTsaDJWzEt946.jpg"
     alt="Desktop Background"
   />
 
-  <div class="pcicon" cdkDrag>
+  <div [class.focused]="isPdfIconActive" (click)="activateIcon('pdf')" class="pcicon" cdkDrag>
     <img class="pdf" src="../../images/pdf64px.png" alt="" />
     <span>My Resume</span>
+    <span>{{pdfClickCount}}</span>
   </div>
 
-  <div class="pcicon" cdkDrag>
+  <div [class.focused]="isAboutIconActive" (click)="activateIcon('about')" class="pcicon" cdkDrag>
     <img class="pdf" src="../../images/notes.png" alt="" />
     <span>About Me</span>
+    <span>{{aboutClickCount}}</span>
+
   </div>
 
   <app-taskbar></app-taskbar>
-
-  <div class="window" cdkDrag cdkDragBoundary=".desktop">
-    <div class="top" cdkDragHandle></div>
-  </div>
+  <app-window *ngIf="isPdfOpen"></app-window>  
 </main>

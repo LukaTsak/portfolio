@@ -1,7 +1,7 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 @font-face {
   font-family: 'Segoe MDL2 Assets';
@@ -12,15 +12,17 @@
   font-size: 13px;
   width: 30px;
   height: 25px;
-  display: grid;
+  // display: grid;
   place-items: center;
   color: white;
   border-radius: 2px;
-  user-select: none;
-  transition: background .12s ease;
+  // user-select: none;
+  cursor: default;
+  transition: background 0.12s ease;
 }
 
-.window, .window * {
+.window,
+.window * {
   -webkit-user-select: none;
   user-select: none;
 }
@@ -28,5 +30,26 @@
 .top {
   -webkit-user-select: none;
   user-select: none;
-//   cursor: move;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  // border: 1px solid red;
+  height: 100%;
+
+  .icon {
+    // margin-left: 10px;
+    width: 24px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &:hover {
+    background-color: rgba(229, 241, 251, 0.25);
+  }
 }

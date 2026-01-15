@@ -1,0 +1,22 @@
+<div [style.--x]="spawnX" [style.--y]="spawnY" #win class="window" #windowElement>
+  <div class="top-bar" (mousedown)="startDrag($event)">
+    <div class="left">
+      <span>About</span>
+    </div>
+    <div class="right">
+      <div class="win-icon windowManipulation">&#xE738;</div>
+      <div class="win-icon windowManipulation">&#xE739;</div>
+      <div class="win-icon windowManipulation close">&#xE8BB;</div>
+    </div>
+  </div>
+
+  <span class="resize top"></span>
+  <span class="resize right"></span>
+  <span class="resize bottom"></span>
+  <span class="resize left"></span>
+
+  <span class="resize tl"></span>
+  <span class="resize tr"></span>
+  <span class="resize bl"></span>
+  <span class="resize br"></span>
+</div>

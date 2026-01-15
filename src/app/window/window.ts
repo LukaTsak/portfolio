@@ -96,7 +96,6 @@ export class Window implements AfterViewInit, OnDestroy {
     this.resizing = true;
     this.dragging = false;
 
-    // ✅ MUST use currentTarget (the span you clicked), NOT target
     const handle = e.currentTarget as HTMLElement;
 
     // ✅ direction is whichever class is not "resize"
@@ -250,6 +249,17 @@ export class Window implements AfterViewInit, OnDestroy {
   }
 
   closeWindow() {
+    this.WindowActive = false;
     this.close.emit();
+  }
+
+  @Output() activeChange = new EventEmitter<boolean>();
+
+  WindowActive = false;
+
+  onWindowClick() {
+    this.WindowActive = true;
+
+    this.activeChange.emit(this.WindowActive);
   }
 }

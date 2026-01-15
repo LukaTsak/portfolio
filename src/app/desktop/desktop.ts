@@ -55,7 +55,19 @@ export class Desktop {
     this.isPdfOpen = false;
   }
 
-  maximizeWindow(){
+  maximizeWindow() {}
 
+  noAcriveIcons() {
+    // this.pdfClickCount += 1
+    // if (this.isPdfIconActive = true || this.isAboutIconActive == true) {
+    //   this.isPdfIconActive = false;
+    //   this.isAboutIconActive = false;
+    // }
+  }
+
+  isAnyWindowActive = false;
+
+  onWindowActive(value: boolean) {
+    this.isAnyWindowActive = value;
   }
 }

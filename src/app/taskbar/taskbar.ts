@@ -1,13 +1,20 @@
-import { DatePipe } from '@angular/common';
-import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { CommonModule, DatePipe } from '@angular/common';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-taskbar',
   templateUrl: './taskbar.html',
-  imports: [DatePipe],
+  imports: [DatePipe, CommonModule],
   styleUrl: './taskbar.scss',
 })
 export class Taskbar implements OnInit, OnDestroy {
+
+  @Input() isPdfOpen!: boolean
+  @Input() isPdfActive!: boolean
+  @Input() isAboutOpen!: boolean
+  
+
+
   currentDate = new Date();
   private timerId!: number;
 

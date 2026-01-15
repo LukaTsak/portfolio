@@ -1,4 +1,4 @@
-<main id="desktop">
+<main (click)="noAcriveIcons()" id="desktop">
   <img
     src="https://cdn.mos.cms.futurecdn.net/52HVcjStCQTsaDJWzEt946.jpg"
     alt="Desktop Background"
@@ -17,7 +17,7 @@
 
   </div>
 
-  <app-taskbar></app-taskbar>
+  <app-taskbar [isPdfActive]="isAnyWindowActive" [isAboutOpen]="isAboutOpen" [isPdfOpen]="isPdfOpen"></app-taskbar>
   <app-window *ngIf="isPdfOpen"
-   (close)="handlePdfClose()" (maximize)="maximizeWindow()"></app-window>  
+   (close)="handlePdfClose()" (activeChange)="onWindowActive($event)" (maximize)="maximizeWindow()"></app-window>  
 </main>

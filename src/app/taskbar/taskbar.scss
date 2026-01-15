@@ -9,14 +9,13 @@ main {
   backdrop-filter: blur(18px) saturate(160%);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
-  gap: 5px;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
 
   .left {
     display: flex;
-    gap: 5px;
+    gap: 3px;
     align-items: center;
   }
 
@@ -47,15 +46,14 @@ main {
   }
 
   .startContainer {
-    
     padding: 9px 10px 9px 10px;
     // margin-left: 5px;
     .start {
-      background-image: url('../../images/startLogo.svg');
+      background-image: url('/images/startLogo.svg');
     }
 
     &:hover .start {
-      background-image: url('../../images/startLogoBlue.svg') !important;
+      background-image: url('/images/startLogoBlue.svg') !important;
     }
   }
 
@@ -63,7 +61,7 @@ main {
     .explorer {
       width: 31px;
       height: 27px;
-      background-image: url('../../images/fileExplorer.ico');
+      background-image: url('/images/fileExplorer.ico');
     }
   }
 
@@ -71,9 +69,55 @@ main {
     .chrome {
       width: 27px;
       height: 27px;
-      background-image: url('../../images/chrome.svg');
+      background-image: url('/images/chrome.svg');
     }
   }
+
+  .AboutContainer {
+    .about {
+      width: 27px;
+      height: 27px;
+      background-image: url('../../images/notes.png');
+    }
+  }
+
+  .PdfContainer {
+    .pdf {
+      width: 27px;
+      height: 27px;
+      background-image: url('../../images/pdf64px.png');
+    }
+  }
+
+  .openedIconInTaskbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+    // border: 1px solid red;
+    height: 100%;
+    background-color: rgba(229, 241, 251, 0.25);
+
+    .icon {
+      // margin-left: 10px;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    
+  }
+  .undernile {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      // width: 100%;
+      width: 43px;
+      height: 2px;
+      background-color: #75baec;
+    }
 
   .right {
     // margin-right: 5px;

@@ -11,6 +11,16 @@
     <div class="container chromecontainer">
       <div class="icon chrome"></div>
     </div>
+
+    <div *ngIf="isAboutOpen" class="container AboutContainer">
+      <div class="icon about"></div>
+
+    </div>
+
+    <div [ngClass]="{openedIconInTaskbar: isPdfActive}" *ngIf="isPdfOpen" class="container PdfContainer openedIconInTaskbar">
+      <div class="icon pdf"></div>
+      <div class="undernile"></div>
+    </div>
   </div>
 
   <div class="right">
@@ -18,7 +28,9 @@
     <div class="container win-icon">&#xE703;</div>
     <div class="container win-icon">&#xE995;</div>
     <div class="container win-icon font">ENG</div>
-    <div class="container win-icon date">{{ currentDate | date:'HH:mm' }} {{ currentDate | date:'MM/dd/yy' }}</div>
+    <div class="container win-icon date">
+      {{ currentDate | date : 'HH:mm' }} {{ currentDate | date : 'MM/dd/yy' }}
+    </div>
     <div class="blank"></div>
   </div>
 

@@ -50,4 +50,12 @@ export class Desktop {
     if (app === 'pdf') this.isPdfOpen = true;
     if (app === 'about') this.isAboutOpen = true;
   }
+
+  handlePdfClose() {
+    this.isPdfOpen = false;
+  }
+
+  maximizeWindow(){
+
+  }
 }

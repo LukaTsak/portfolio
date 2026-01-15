@@ -47,7 +47,9 @@ main {
   }
 
   .startContainer {
-    margin-left: 5px;
+    
+    padding: 9px 10px 9px 10px;
+    // margin-left: 5px;
     .start {
       background-image: url('../../images/startLogo.svg');
     }
@@ -68,7 +70,7 @@ main {
   .chromecontainer {
     .chrome {
       width: 27px;
-      height: 23px;
+      height: 27px;
       background-image: url('../../images/chrome.svg');
     }
   }
@@ -78,12 +80,15 @@ main {
     height: 100%;
     display: flex;
     gap: 5px;
+    font-weight: 200;
     .font {
       font-size: 12px;
+      font-weight: 200;
       font-family: 'Segoe UI', 'Segoe UI Variable', system-ui, -apple-system, BlinkMacSystemFont,
         sans-serif;
     }
     .date {
+      font-weight: 200;
       width: 60px;
       text-align: center;
     }

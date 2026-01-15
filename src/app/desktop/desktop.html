@@ -7,16 +7,17 @@
   <div [class.focused]="isPdfIconActive" (click)="activateIcon('pdf')" class="pcicon" cdkDrag>
     <img class="pdf" src="../../images/pdf64px.png" alt="" />
     <span>My Resume</span>
-    <span>{{pdfClickCount}}</span>
+    <!-- <span>{{pdfClickCount}}</span> -->
   </div>
 
   <div [class.focused]="isAboutIconActive" (click)="activateIcon('about')" class="pcicon" cdkDrag>
     <img class="pdf" src="../../images/notes.png" alt="" />
     <span>About Me</span>
-    <span>{{aboutClickCount}}</span>
+    <!-- <span>{{aboutClickCount}}</span> -->
 
   </div>
 
   <app-taskbar></app-taskbar>
-  <app-window *ngIf="isPdfOpen"></app-window>  
+  <app-window *ngIf="isPdfOpen"
+   (close)="handlePdfClose()" (maximize)="maximizeWindow()"></app-window>  
 </main>

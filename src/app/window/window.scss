@@ -1,6 +1,9 @@
 .window {
-  width: 600px;
-  height: 600px;
+  // width: 600px;
+  // height: 600px;
+  // transition: width 0.25s ease, height 0.25s ease;
+  width: var(--yh);
+  height: var(--xh);
   position: absolute;
   left: calc(var(--x) * 1%);
   top: calc(var(--y) * 1%);

@@ -1,12 +1,20 @@
-<div [style.--x]="spawnX" [style.--y]="spawnY" #win class="window" #windowElement>
+<div
+  [style.--x]="spawnX"
+  [style.--y]="spawnY"
+  [style.--xh]="windowX"
+  [style.--yh]="windowY"
+  #win
+  class="window"
+  #windowElement
+>
   <div class="top-bar" (mousedown)="startDrag($event)">
     <div class="left">
       <span>About</span>
     </div>
     <div class="right">
-      <div class="win-icon windowManipulation">&#xE738;</div>
-      <div class="win-icon windowManipulation">&#xE739;</div>
-      <div class="win-icon windowManipulation close">&#xE8BB;</div>
+      <div (click)="minimize()" class="win-icon windowManipulation">&#xE738;</div>
+      <div (click)="maximizeWindow()" class="win-icon windowManipulation">&#xE739;</div>
+      <div (click)="closeWindow()" class="win-icon windowManipulation close">&#xE8BB;</div>
     </div>
   </div>
 
